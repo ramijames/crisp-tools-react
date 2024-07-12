@@ -1,12 +1,13 @@
 .sidebar {
-  width: 240px;
+  width: 320px;
   height: 100%;
-  border-right: 1px solid rgba(var(--grey-10), 0.1);
+  border-right: 1px solid rgba(var(--white), 0.2);
   transition: transform 0.3s ease-in-out;
 
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-lg) var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .sidebar a {
@@ -14,9 +15,10 @@
   padding: var(--spacing-md);
   text-transform: uppercase;
   font-weight: 500;
+  border-radius: var(--border-radius-xl);
 }
 
 .sidebar a:hover,
 .sidebar a:focus {
-  background: rgba(var(--blue), 0.1);
+  background: rgba(var(--blue), 0.4);
 }
