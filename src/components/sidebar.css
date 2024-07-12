@@ -6,13 +6,15 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: var(--spacing-lg) var(--spacing-md);
   gap: var(--spacing-sm);
 }
 
 .sidebar a {
   font-size: var(--font-size-sm);
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
   text-transform: uppercase;
   font-weight: 500;
   border-radius: var(--border-radius-xl);
@@ -21,4 +23,9 @@
 .sidebar a:hover,
 .sidebar a:focus {
   background: rgba(var(--blue), 0.4);
+}
+
+.sidebar a.active {
+  background: rgba(var(--white), 1);
+  color: rgba(var(--black), 1);
 }

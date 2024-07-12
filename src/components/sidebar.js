@@ -1,13 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+// Styles
 import './sidebar.css';
 
 const Sidebar = () => {
   return (
     <nav className="sidebar">
-      <a href="#">Home</a>
-      <a href="#">Color</a>
-      <a href="#">Text</a>
-      <a href="#">Styles</a>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/color-tools">Color Tools</NavLink>
+      <NavLink to="/text-tools">Text Tools</NavLink>
+      <NavLink to="/style-tools">Style Tools</NavLink>
     </nav>
   );
 };
