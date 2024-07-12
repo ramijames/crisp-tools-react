@@ -18,11 +18,16 @@
   text-transform: uppercase;
   font-weight: 500;
   border-radius: var(--border-radius-xl);
+  color: rgba(var(--white), 1);
+  transition: all 0.18s ease-in-out;
+  border: 1px solid rgba(var(--white), 0);
 }
 
 .sidebar a:hover,
 .sidebar a:focus {
-  background: rgba(var(--blue), 0.4);
+  background: rgba(var(--purple), 0.2);
+  border: 1px solid rgba(var(--purple), 0.4);
+  box-shadow: 0 0 10px rgba(var(--purple), 0.4);
 }
 
 .sidebar a.active {

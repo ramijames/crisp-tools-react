@@ -19,8 +19,11 @@
 
   /* Colors */
   --white: 255,255,255;
-  --black: 0,0,0;
+  --black: 33, 29, 29;
   --blue: 0, 122, 255;
+  --purple: 209, 55, 247;
+  --pink: 247, 55, 182;
+  --orange: 255, 158, 104;
   --grey-10: 25, 25, 25;
 
   /* Spacing */
@@ -55,8 +58,31 @@ body {
 }
 
 a {
-  color: inherit;
+  color: rgb(var(--purple));
   text-decoration: none;
+}
+
+    a.backButton {
+      color: rgb(var(--white));
+      text-decoration: none;
+      border: 1px solid rgba(var(--white), 0.2);
+      font-size: var(--font-size-sm);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--border-radius-xl);
+      transition: all 0.18s ease-in-out;
+      margin-bottom: var(--spacing-md);
+      display: inline-block;
+    }
+
+    a.backButton:hover,
+    a.backButton:focus {
+      background: rgba(var(--purple), 0.2);
+      border: 1px solid rgba(var(--purple), 0.4);
+      box-shadow: 0 0 10px rgba(var(--purple), 0.4);
+    }
+
+h1 {
+  margin-bottom: var(--spacing-md);
 }
 
 .Crisp {

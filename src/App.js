@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Tools
 import Home from './pages/home';
-import ColorTools from './pages/colortools';
-import TextTools from './pages/texttools';
-import StyleTools from './pages/styletools';
+import ColorTools from './pages/color-tools/colortools';
+import TextTools from './pages/text-tools/texttools';
+import LoremIpsum from './pages/text-tools/lorem-ipsum';
+import StyleTools from './pages/style-tools/styletools';
 
 // General Styles
 import './App.css';
@@ -26,6 +27,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/color-tools" element={<ColorTools />} />
               <Route path="/text-tools" element={<TextTools />} />
+                <Route path="/text-tools/lorem-ipsum" element={<LoremIpsum />} />
               <Route path="/style-tools" element={<StyleTools />} />
             </Routes>
           </section>
