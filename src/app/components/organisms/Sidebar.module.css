@@ -1,0 +1,22 @@
+.sidebar {
+  width: 240px;
+  height: 100%;
+  border-right: 1px solid rgba(var(--grey-10), 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md) 0;
+}
+
+.sidebar a {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  background: rgba(var(--blue), 0.1);
+}
