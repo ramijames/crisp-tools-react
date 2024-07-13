@@ -16,6 +16,14 @@ function ColorPaletteGeneratorPage () {
 
   const [red, green, blue] = ConvertHexToRGB(color);
 
+  function GenerateColorPalette(color) {
+    // 
+
+    return [ '#424b4f', '#424b4f', '#424b4f', '#424b4f', '#424b4f' ];
+  }
+
+  const colorPalette = GenerateColorPalette(red, green, blue);
+
   return (
     <main className="CrispTool">
       <BackTo to="/color-tools">
@@ -29,14 +37,33 @@ function ColorPaletteGeneratorPage () {
         <section className={style.ColorPaletteGenerator}>
           <section className={style.ColorPaletteSelect}>
             <HexColorPicker color={color} onChange={setColor} />
-            <div className={style.ColorOutputRGB}>
+            <div className={style.ColorSelectHEX}>
+              <div>HEX <span className={style.number}>{color}</span></div>
+            </div>
+            <div className={style.ColorSelectRGB}>
               <div>R <span className={style.number}>{red}</span></div>
               <div>G <span className={style.number}>{green}</span></div>
               <div>B <span className={style.number}>{blue}</span></div>
             </div>
           </section>
           <section className={style.ColorPaletteOutput}>
-            temp
+            <div className={style.allColors}>
+              <div className={style.singleColor} style={{background:colorPalette[0]}}>
+                {colorPalette[0]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette[1]}}>
+                {colorPalette[1]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette[2]}}>
+                {colorPalette[2]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette[3]}}>
+                {colorPalette[3]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette[4]}}>
+                {colorPalette[4]}
+              </div>
+            </div>
           </section>
         </section>
       </section>
