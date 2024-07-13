@@ -11,8 +11,6 @@ a.backButton {
   text-decoration: none;
   font-size: var(--font-size-sm);
   text-transform: uppercase;
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--border-radius-xl);
   transition: all 0.18s ease-in-out;
   display: inline-block;
   display: flex;
@@ -28,7 +26,6 @@ a.backButton p {
 
 a.backButton:hover,
 a.backButton:focus {
-  background: rgba(var(--white), 0.1);
   gap: var(--spacing-md); 
   border-bottom: none;
 }
