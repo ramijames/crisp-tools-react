@@ -60,19 +60,19 @@ body {
 }
 
 body {
-  color: rgb(var(--white));
-  background: rgb(var(--black));
+  color: rgb(var(--black));
+  background: rgb(var(--white));
 }
 
 a {
-  color: rgb(var(--pink));
+  color: rgb(var(--purple));
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--pink), 0.3);
+  border-bottom: 1px solid rgba(var(--purple), 0.3);
   transition: border 0.18s ease-in-out;
 }
 
     a:hover {
-      border-bottom: 1px solid rgba(var(--pink), 1);
+      border-bottom: 1px solid rgba(var(--purple), 1);
     }
 
 h1 {
@@ -97,7 +97,6 @@ h1 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  /* padding: var(--spacing-xl); */
   overflow-y:auto;
   overflow-x: hidden;
 }
@@ -115,7 +114,8 @@ h1 {
   width: 100%;
   height: 100%;
   padding: var(--spacing-md) var(--spacing-xl);
-  background: rgba(var(--white), 0.05);
+  background: rgba(var(--black), 0.02);
   overflow-x: hidden;
   overflow-y: auto;
+  align-items: flex-start;
 }

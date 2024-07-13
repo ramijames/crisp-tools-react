@@ -10,3 +10,9 @@
   margin-bottom: 0;
   font-size: var(--font-size-xl);
 }
+
+.ToolHeader p {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: rgba(var(--black), 1);
+}

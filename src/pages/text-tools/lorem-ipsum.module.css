@@ -10,5 +10,5 @@
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }

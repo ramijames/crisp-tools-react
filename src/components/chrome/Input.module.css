@@ -7,21 +7,21 @@
 .CrispInput label {
   font-size: var(--font-size-sm);
   text-transform: uppercase;
-  color: rgba(var(--white), 0.5);
+  color: rgba(var(--black), 0.5);
 }
 
 .CrispInput input {
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(var(--white), 0.2);
+  border: 1px solid rgba(var(--black), 0.2);
   border-radius: var(--border-radius-sm);
   font-size: 1rem;
-  color: var(--white);
+  color: var(--black);
   background-color: var(--black);
   transition: border-color 0.2s ease;
 }
 
 .CrispInput input:focus,
 .CrispInput input:active {
-  border: 1px solid rgba(var(--white), 1);
+  border: 1px solid rgba(var(--purple), 1);
   outline: none;
 }

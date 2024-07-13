@@ -3,11 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) var(--spacing-lg);
-  border-bottom: 1px solid rgba(var(--white), 0.2);
+  border-bottom: 1px solid rgba(var(--black), 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 a.backButton {
-  color: rgb(var(--white));
+  color: rgb(var(--black));
   text-decoration: none;
   font-size: var(--font-size-sm);
   text-transform: uppercase;

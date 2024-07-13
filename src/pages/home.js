@@ -3,7 +3,7 @@ import ToolHeader from '../components/common/ToolHeader';
 function Home() {
   return (
     <section className="ToolPanel">
-      <ToolHeader title="Color Tools" description="A collection of tools for generating, manipulating, and managing colors." />
+      <ToolHeader title="All Tools" description="Here you will find an assortment of tools to improve your design and development experience." />
     </section>
   );
 }

@@ -1,13 +1,10 @@
 .sidebar {
   width: 320px;
   height: 100%;
-  border-right: 1px solid rgba(var(--white), 0.2);
+  border-right: 1px solid rgba(var(--black), 0.1);
   transition: transform 0.3s ease-in-out;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: var(--spacing-lg) var(--spacing-md);
   gap: var(--spacing-sm);
 }
@@ -18,17 +15,17 @@
   text-transform: uppercase;
   font-weight: 500;
   border-radius: var(--border-radius-xl);
-  color: rgba(var(--white), 1);
+  color: rgba(var(--black), 1);
   transition: all 0.18s ease-in-out;
-  border: 1px solid rgba(var(--white), 0);
+  border: 1px solid rgba(var(--black), 0);
 }
 
 .sidebar a:hover,
 .sidebar a:focus {
-  background: rgba(var(--white), 0.1);
+  background: rgba(var(--black), 0.1);
 }
 
 .sidebar a.active {
-  background: rgba(var(--white), 1);
-  color: rgba(var(--black), 1);
+  background: rgba(var(--black), 1);
+  color: rgba(var(--white), 1);
 }
