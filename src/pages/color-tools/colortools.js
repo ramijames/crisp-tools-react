@@ -1,8 +1,8 @@
 function ColorTools() {
   return (
-    <div>
+    <section className="ToolPanel">
       <h1>Color Tools</h1>
-    </div>
+    </section>
   );
 }
 

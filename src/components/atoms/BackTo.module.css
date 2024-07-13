@@ -1,0 +1,34 @@
+.backBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid rgba(var(--white), 0.2);
+}
+
+a.backButton {
+  color: rgb(var(--white));
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-xl);
+  transition: all 0.18s ease-in-out;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-sm); 
+  border-bottom: none;
+}
+
+a.backButton p {
+  margin-top: 2px;
+}
+
+a.backButton:hover,
+a.backButton:focus {
+  background: rgba(var(--white), 0.1);
+  gap: var(--spacing-md); 
+  border-bottom: none;
+}

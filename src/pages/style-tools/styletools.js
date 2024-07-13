@@ -1,9 +1,9 @@
 function StyleTools () {
   return (
-    <div>
+    <section className="ToolPanel">
       <h1>Style Tools</h1>
       <p></p>
-    </div>
+    </section>
   );
 }
 

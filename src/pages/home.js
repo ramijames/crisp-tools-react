@@ -2,9 +2,9 @@
 
 function Home() {
   return (
-    <div>
+    <section className="ToolPanel">
       <h1>Home</h1>
-    </div>
+    </section>
   );
 }
 

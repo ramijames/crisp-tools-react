@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 function TextTools() {
   return (
-    <div>
+    <section className="ToolPanel">
       <h1>Text Tools</h1>
       <Link to="/text-tools/lorem-ipsum">Lorem Ipsum Generator</Link>
-    </div>
+    </section>
   );
 }
 
