@@ -22,10 +22,10 @@
 
 .sidebar a:hover,
 .sidebar a:focus {
-  background: rgba(var(--black), 0.1);
+  background: rgba(var(--purple), 0.1);
 }
 
 .sidebar a.active {
-  background: rgba(var(--black), 1);
+  background: rgba(var(--purple), 1);
   color: rgba(var(--white), 1);
 }
