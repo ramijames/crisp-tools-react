@@ -1,0 +1,54 @@
+.ColorPaletteGenerator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  background-color: rgba(var(--white));
+  color: rgba(var(--black));
+  box-shadow: var(--shadow-md);
+}
+
+    .ColorPaletteSelect {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      padding: var(--spacing-xl);
+      border-right: 1px solid rgba(var(--black), 0.1);
+    }
+
+        .ColorPaletteOutput {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-md);
+          padding: var(--spacing-xl);
+        }
+
+            .ColorOutputRGB {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: var(--spacing-sm);
+            }
+
+                .ColorOutputRGB div {
+                  display: flex;
+                  flex-direction: row;
+                  border: 1px solid rgba(var(--black), 0.1);
+                  padding: var(--spacing-sm);
+                  justify-content: space-between;
+                  border-radius: var(--border-radius-md);
+                  color: rgba(var(--black), 0.4);
+                  font-size: var(--font-size-sm);
+                }
+
+                    .ColorOutputRGB .number {
+                      display: block;
+                      align-self: flex-end;
+                      color: rgba(var(--black), 1);
+                    }
+
