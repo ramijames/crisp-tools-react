@@ -19,10 +19,13 @@ function LoremIpsumPage () {
       wordsPerSentence: {
         max: 32,
         min: 8
-      }
+      },
+      format: "html"
     });
 
     const text = lorem.generateParagraphs(parseInt(numParagraphs, 10));
+
+    console.log(text);
 
     setGeneratedText(text);
   
@@ -42,7 +45,15 @@ function LoremIpsumPage () {
         <div className="ToolPanel__form">
           <div className="ToolPanel__form__input">
             <label htmlFor="numParagraphs">Number of Paragraphs</label>
-            <input type="number" id="numParagraphs" value={numParagraphs} onChange={(e) => setNumParagraphs(e.target.value)} />
+            <input
+              type="number"
+              id="numParagraphs"
+              value={numParagraphs}
+              onChange={(e) => {
+                const value = parseInt(e.target.value, 10);
+                setNumParagraphs(value < 1 ? 1 : value);
+              }}
+            />
           </div>
         </div>
         <div className={styles.ToolPanel__output}>

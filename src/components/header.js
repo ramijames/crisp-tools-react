@@ -4,7 +4,7 @@ import './header.css';
 function Header() {
   return (
     <header className="TopBar">
-      <img src={logo} className="CrispLogo" />
+      <img src={logo} className="CrispLogo" alt="Crisp Tools" />
     </header>
   );
 }
