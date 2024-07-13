@@ -1,8 +1,9 @@
+import ToolHeader from "../../components/common/ToolHeader";
+
 function StyleTools () {
   return (
     <section className="ToolPanel">
-      <h1>Style Tools</h1>
-      <p></p>
+      <ToolHeader title="Style Tools" description="A collection of tools for generating, manipulating, and managing styles." />
     </section>
   );
 }

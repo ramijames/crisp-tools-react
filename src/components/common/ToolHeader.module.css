@@ -1,0 +1,12 @@
+.ToolHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 0 var(--spacing-xl);
+}
+
+.ToolHeader h1 {
+  margin-bottom: 0;
+  font-size: var(--font-size-xl);
+}

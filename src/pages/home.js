@@ -1,9 +1,9 @@
-// Home dashboard
+import ToolHeader from '../components/common/ToolHeader';
 
 function Home() {
   return (
     <section className="ToolPanel">
-      <h1>Home</h1>
+      <ToolHeader title="Color Tools" description="A collection of tools for generating, manipulating, and managing colors." />
     </section>
   );
 }

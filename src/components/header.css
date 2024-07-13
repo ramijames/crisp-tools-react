@@ -5,4 +5,5 @@
 .TopBar {
   padding: var(--spacing-lg);
   border-bottom: 1px solid rgba(var(--white), 0.2);
+  height: 78px;
 }

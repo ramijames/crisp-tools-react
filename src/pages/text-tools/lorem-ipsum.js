@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import BackTo from '../../components/atoms/BackTo';
+import Input from '../../components/chrome/Input';
+import BackTo from '../../components/common/BackTo';
+import ToolHeader from '../../components/common/ToolHeader';
 import styles from './lorem-ipsum.module.css';
 
 const { LoremIpsum } = require('lorem-ipsum');
@@ -40,12 +42,12 @@ function LoremIpsumPage () {
         <p>Back to Text Tools</p>
       </BackTo>
       <section className="ToolPanel">
-        <h1>Lorem Ipsum Generator</h1>
-        <p>Generate placeholder text for your projects.</p>
+        <ToolHeader title="Lorem Ipsum Generator" description="Generate text content for use in your designs and mockups" />
         <div className="ToolPanel__form">
           <div className="ToolPanel__form__input">
-            <label htmlFor="numParagraphs">Number of Paragraphs</label>
-            <input
+            <Input
+              htmlFor="numParagraphs"
+              label="Number of Paragraphs"
               type="number"
               id="numParagraphs"
               value={numParagraphs}
