@@ -3,26 +3,33 @@ import ToolHeader from '../../components/common/ToolHeader';
 import BackTo from '../../components/common/BackTo';
 import style from './color-palette-generator.module.css';
 import { HexColorPicker } from 'react-colorful';
+import { ConvertHexToRGB, ConvertRGBToHex } from '../../utils/color-conversion';
+import chroma from 'chroma-js';
 
 function ColorPaletteGeneratorPage () {
-  const [color, setColor] = useState("#aabbcc");
+  const [color, setColor] = useState("#cc9900");
 
-  function ConvertHexToRGB(hex) {
-    const r = parseInt(hex.substring(1, 3), 16);
-    const g = parseInt(hex.substring(3, 5), 16);
-    const b = parseInt(hex.substring(5, 7), 16);
-    return [ r, g, b ];
-  }
-
+  // For RGB output
   const [red, green, blue] = ConvertHexToRGB(color);
 
   function GenerateColorPalette(color) {
-    // 
+    const output = {
+      lighten: [],
+      darken: [],
+    };
 
-    return [ '#424b4f', '#424b4f', '#424b4f', '#424b4f', '#424b4f' ];
+    console.log(color);
+    
+    // Lighten the color
+    output.lighten = chroma.scale([color, 'white']).mode('lch').colors(5);
+
+    // Darken the color
+    output.darken = chroma.scale([color, 'black']).mode('lch').colors(5);
+
+    return output;
   }
 
-  const colorPalette = GenerateColorPalette(red, green, blue);
+  const colorPalette = GenerateColorPalette(color);
 
   return (
     <main className="CrispTool">
@@ -47,21 +54,41 @@ function ColorPaletteGeneratorPage () {
             </div>
           </section>
           <section className={style.ColorPaletteOutput}>
+            <h2>Lighten</h2>
             <div className={style.allColors}>
-              <div className={style.singleColor} style={{background:colorPalette[0]}}>
-                {colorPalette[0]}
+              <div className={style.singleColor} style={{background:colorPalette.lighten[0]}}>
+                {colorPalette.lighten[0]}
               </div>
-              <div className={style.singleColor} style={{background:colorPalette[1]}}>
-                {colorPalette[1]}
+              <div className={style.singleColor} style={{background:colorPalette.lighten[1]}}>
+                {colorPalette.lighten[1]}
               </div>
-              <div className={style.singleColor} style={{background:colorPalette[2]}}>
-                {colorPalette[2]}
+              <div className={style.singleColor} style={{background:colorPalette.lighten[2]}}>
+                {colorPalette.lighten[2]}
               </div>
-              <div className={style.singleColor} style={{background:colorPalette[3]}}>
-                {colorPalette[3]}
+              <div className={style.singleColor} style={{background:colorPalette.lighten[3]}}>
+                {colorPalette.lighten[3]}
               </div>
-              <div className={style.singleColor} style={{background:colorPalette[4]}}>
-                {colorPalette[4]}
+              <div className={style.singleColor} style={{background:colorPalette.lighten[4]}}>
+                {colorPalette.lighten[4]}
+              </div>
+            </div>
+
+            <h2>Darken</h2>
+            <div className={style.allColors}>
+              <div className={style.singleColor} style={{background:colorPalette.darken[0]}}>
+                {colorPalette.darken[0]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[1]}}>
+                {colorPalette.darken[1]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[2]}}>
+                {colorPalette.darken[2]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[3]}}>
+                {colorPalette.darken[3]}
+              </div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[4]}}>
+                {colorPalette.darken[4]}
               </div>
             </div>
           </section>
