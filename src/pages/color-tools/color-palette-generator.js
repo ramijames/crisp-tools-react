@@ -56,40 +56,30 @@ function ColorPaletteGeneratorPage () {
           <section className={style.ColorPaletteOutput}>
             <h2>Lighten</h2>
             <div className={style.allColors}>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[0]}}>
-                {colorPalette.lighten[0]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[1]}}>
-                {colorPalette.lighten[1]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[2]}}>
-                {colorPalette.lighten[2]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[3]}}>
-                {colorPalette.lighten[3]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[4]}}>
-                {colorPalette.lighten[4]}
-              </div>
+              <div className={style.singleColor} style={{background:colorPalette.lighten[0]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.lighten[1]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.lighten[2]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.lighten[3]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.lighten[4]}}></div>
+              <div className={style.singleColorValue}>{colorPalette.lighten[0]}</div>
+              <div className={style.singleColorValue}>{colorPalette.lighten[1]}</div>
+              <div className={style.singleColorValue}>{colorPalette.lighten[2]}</div>
+              <div className={style.singleColorValue}>{colorPalette.lighten[3]}</div>
+              <div className={style.singleColorValue}>{colorPalette.lighten[4]}</div>
             </div>
 
             <h2>Darken</h2>
             <div className={style.allColors}>
-              <div className={style.singleColor} style={{background:colorPalette.darken[0]}}>
-                {colorPalette.darken[0]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[1]}}>
-                {colorPalette.darken[1]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[2]}}>
-                {colorPalette.darken[2]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[3]}}>
-                {colorPalette.darken[3]}
-              </div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[4]}}>
-                {colorPalette.darken[4]}
-              </div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[0]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[1]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[2]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[3]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette.darken[4]}}></div>
+              <div className={style.singleColorValue}>{colorPalette.darken[0]}</div>
+              <div className={style.singleColorValue}>{colorPalette.darken[1]}</div>
+              <div className={style.singleColorValue}>{colorPalette.darken[2]}</div>
+              <div className={style.singleColorValue}>{colorPalette.darken[3]}</div>
+              <div className={style.singleColorValue}>{colorPalette.darken[4]}</div>
             </div>
           </section>
         </section>
