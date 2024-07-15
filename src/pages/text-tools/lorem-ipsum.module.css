@@ -1,7 +1,7 @@
 .ToolPanel__output {
   margin-top: var(--spacing-md);
   padding: var(--spacing-xl);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
   background-color: rgba(var(--white));
   color: rgba(var(--black));
   line-height: 1.5;
@@ -10,5 +10,5 @@
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }

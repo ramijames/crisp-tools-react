@@ -1,3 +1,12 @@
+.ToolTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+
 .Converter {
   display: flex;
   flex-direction: column;
@@ -6,11 +15,65 @@
   width: 100%;
   height: 100%;
   padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
   background-color: rgba(var(--white));
   color: rgba(var(--black));
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
+
+.Toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+    .TypeToggle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-md);
+      position: relative;
+      font-size: var(--font-size-sm);
+    }
+
+        .TypeToggle input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          display: none;
+        }
+
+        .TypeToggle .Slider {
+          width: 60px;
+          height: 32px;
+          border: 1px solid rgba(var(--black), 0.1);
+          border-radius: 30px;
+          position: relative;
+          cursor: pointer;
+          left: 0;
+          transition: 0.4s;
+        }
+
+        .TypeToggle .Slider:before {
+          content: "";
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: rgba(var(--purple), 1);
+          transition: 0.4s;
+          top: 4px;
+          left: 4px;
+          transition: all 0.24s ease-in-out;
+          box-shadow: var(--shadow-md);
+        }
+
+        .TypeToggle input:checked + .Slider:before {
+          left: 32px;
+        }
 
 .YamlConverterContent {
   display: flex;
