@@ -5,27 +5,24 @@
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-lg) var(--spacing-md);
-  gap: var(--spacing-sm);
 }
 
-.sidebar a {
-  font-size: var(--font-size-sm);
-  padding: var(--spacing-md) var(--spacing-lg);
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: var(--border-radius-xl);
-  color: rgba(var(--black), 1);
-  transition: all 0.18s ease-in-out;
-  border: 1px solid rgba(var(--black), 0);
-}
+    .sidebar a {
+      font-size: var(--font-size-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      text-transform: uppercase;
+      font-weight: 500;
+      color: rgba(var(--black), 1);
+      transition: all 0.18s ease-in-out;
+      border-left: 4px solid rgba(var(--black), 0);
+      border-bottom: none;
+    }
 
-.sidebar a:hover,
-.sidebar a:focus {
-  background: rgba(var(--purple), 0.1);
-}
+    .sidebar a:hover,
+    .sidebar a:focus {
+      border-left: 4px solid rgba(var(--orange), 1);
+    }
 
-.sidebar a.active {
-  background: rgba(var(--purple), 1);
-  color: rgba(var(--white), 1);
-}
+    .sidebar a.active {
+      border-left: 4px solid rgba(var(--purple), 1);
+    }

@@ -10,7 +10,7 @@ const Sidebar = () => {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/color-tools">Color Tools</NavLink>
       <NavLink to="/text-tools">Text Tools</NavLink>
-      <NavLink to="/style-tools">Style Tools</NavLink>
+      <NavLink to="/conversion-tools">Conversion Tools</NavLink>
     </nav>
   );
 };

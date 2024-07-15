@@ -127,3 +127,56 @@ h1 {
   overflow-y: auto;
   align-items: flex-start;
 }
+
+    .ToolList {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: var(--spacing-md);
+      width: 100%;
+    }
+
+        .LinkIcon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border: none;
+          font-size: var(--font-size-sm);
+          color: rgba(var(--black));
+          border: none;
+          transition: color 0.18s ease-in-out;
+        }
+
+        .LinkIcon:hover {
+          color: rgba(var(--purple));
+          border: none;
+        }
+
+        .LinkIcon img {
+          width: 100%;
+        }
+
+
+.ToolContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: rgba(var(--black));
+}
+
+.ToolFunction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  color: rgba(var(--black));
+  padding: 0 0 var(--spacing-md) 0;
+  border-radius: var(--border-radius-sm);
+  border-bottom: 1px solid rgba(var(--black), 0.1);
+  color: rgba(var(--black));
+}

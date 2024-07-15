@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Tools
 import Home from './pages/home';
 import ColorTools from './pages/color-tools/colortools';
-import ColorPaletteGenerator from './pages/color-tools/color-palette-generator';
+  import ColorPaletteGenerator from './pages/color-tools/color-palette-generator';
 import TextTools from './pages/text-tools/texttools';
-import LoremIpsum from './pages/text-tools/lorem-ipsum';
+  import LoremIpsum from './pages/text-tools/lorem-ipsum';
+import ConversionTools from './pages/conversion-tools/conversiontools';
+  import YamlJsonConverter from './pages/conversion-tools/yaml-json';
 import StyleTools from './pages/style-tools/styletools';
 
 // General Styles
@@ -30,7 +32,9 @@ function App() {
                 <Route path="/color-tools/color-palette-generator" element={<ColorPaletteGenerator />} />
               <Route path="/text-tools" element={<TextTools />} />
                 <Route path="/text-tools/lorem-ipsum" element={<LoremIpsum />} />
-              <Route path="/style-tools" element={<StyleTools />} />
+              {/* <Route path="/style-tools" element={<StyleTools />} /> */}
+              <Route path="/conversion-tools" element={<ConversionTools />} />
+                <Route path="/conversion-tools/yaml-to-json" element={<YamlJsonConverter />} />
             </Routes>
           </section>
         </main>

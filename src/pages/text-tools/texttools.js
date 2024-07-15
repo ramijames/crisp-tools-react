@@ -5,7 +5,12 @@ function TextTools() {
   return (
     <section className="ToolPanel">
       <ToolHeader title="Text Tools" description="A collection of tools for generating, manipulating, and managing text." />
-      <Link to="/text-tools/lorem-ipsum">Lorem Ipsum Generator</Link>
+      <section className="ToolList">
+        <Link to="/text-tools/lorem-ipsum" className="LinkIcon">
+          <img src="/lorem-ipsum.svg" alt="Lorem Ipsum Generator" />
+          Lorem Ipsum Generator
+        </Link>
+      </section>
     </section>
   );
 }

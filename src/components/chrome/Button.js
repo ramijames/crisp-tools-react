@@ -1,6 +1,9 @@
+import React from 'react';
+import style from './Button.module.css';
+
 function Button(props) {
   return (
-    <button className="Button" onClick={props.onClick}>
+    <button className={style.ButtonDefault} onClick={props.onClick}>
       {props.children}
     </button>
   );

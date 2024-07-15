@@ -15,7 +15,7 @@ function ColorPaletteGeneratorPage () {
   function GenerateColorPalette(color) {
     const output = {
       lighten: [],
-      darken: [],
+      darken: []
     };
 
     console.log(color);

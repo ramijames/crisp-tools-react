@@ -1,0 +1,51 @@
+.Converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(var(--white));
+  color: rgba(var(--black));
+  box-shadow: var(--shadow-md);
+}
+
+.YamlConverterContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+  .ButtonColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+  }
+
+    .Textarea {
+      width: 50%;
+      height: 100%;
+      padding: var(--spacing-md);
+      border: 2px solid rgba(var(--purple), 0.4);
+      border-radius: var(--border-radius-sm);
+      background-color: rgba(var(--white));
+      color: rgba(var(--black));
+      outline: none;
+    }
+
+    .Pre {
+      width: 50%;
+      height: 100%;
+      padding: var(--spacing-md);
+      border: 1px solid rgba(var(--black), 0.1);
+      border-radius: var(--border-radius-sm);
+      background-color: rgba(var(--purple), 0.05);
+      color: rgba(var(--black));
+      outline: none;
+      overflow: auto;
+    }
