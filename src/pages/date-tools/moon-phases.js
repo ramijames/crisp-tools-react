@@ -15,7 +15,8 @@ function MoonPhases() {
     const fetchData = async () => {
       const options = {
         method: 'GET',
-        url: 'https://moon-phase.p.rapidapi.com/plain-text',
+        url: 'https://moon-phase.p.rapidapi.com/basic',
+        params: {format: 'html'},
         headers: {
           'x-rapidapi-key': rapidApiKey,
           'x-rapidapi-host': 'moon-phase.p.rapidapi.com'
@@ -25,7 +26,6 @@ function MoonPhases() {
       try {
         const response = await axios.request(options);
         setMoonData(response.data);
-        console.log(response.data);
       } catch (error) {
         if (error.response) {
           // The request was made and the server responded with a status code
@@ -47,6 +47,8 @@ function MoonPhases() {
     fetchData();
   }, []);
 
+  console.log(moonData);
+
   return (
     <main className="CrispTool">
       <BackTo to="/date-tools">
@@ -60,7 +62,12 @@ function MoonPhases() {
           <ToolHeader title="Moon Phases" description="Learn about the Lunar Cycle" />
         </div>
         <section>
-          {moonData}
+          {/* <div dangerouslySetInnerHTML={{ __html: moonData }} /> */}
+          <ul>
+            <li>{moonData.phase_name}</li>
+            <li>{moonData.days_until_next_full_moon}</li>
+            <li>{moonData.days_until_next_new_moon}</li>
+          </ul>
         </section>
       </section>
     </main>
