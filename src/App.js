@@ -11,6 +11,8 @@ import TextTools from './pages/text-tools/texttools';
 import ConversionTools from './pages/conversion-tools/conversiontools';
   import YamlJsonConverter from './pages/conversion-tools/yaml-json';
 import StyleTools from './pages/style-tools/styletools';
+import DateTools from './pages/date-tools/datetools';
+  import MoonPhases from './pages/date-tools/moon-phases';
 
 // General Styles
 import './App.css';
@@ -35,6 +37,8 @@ function App() {
               {/* <Route path="/style-tools" element={<StyleTools />} /> */}
               <Route path="/conversion-tools" element={<ConversionTools />} />
                 <Route path="/conversion-tools/yaml-to-json" element={<YamlJsonConverter />} />
+              <Route path="/date-tools" element={<DateTools />} />
+                <Route path="/date-tools/moon-phases" element={<MoonPhases />} />
             </Routes>
           </section>
         </main>
