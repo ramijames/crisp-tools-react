@@ -2,16 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-bottom: 1px solid rgba(var(--black), 0.1);
-  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
 }
 
 a.backButton {
   color: rgb(var(--black));
   text-decoration: none;
-  font-size: var(--font-size-sm);
-  text-transform: uppercase;
+  font-size: var(--font-size-md);
   transition: all 0.18s ease-in-out;
   display: inline-block;
   display: flex;
@@ -19,6 +16,7 @@ a.backButton {
   align-items: center;
   gap: var(--spacing-sm); 
   border-bottom: none;
+  opacity: 0.35;
 }
 
 a.backButton p {
@@ -29,4 +27,5 @@ a.backButton:hover,
 a.backButton:focus {
   gap: var(--spacing-md); 
   border-bottom: none;
+  opacity: 1;
 }

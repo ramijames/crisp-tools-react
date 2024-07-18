@@ -5,24 +5,26 @@
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  background: rgba(var(--black), 0.02);
+  padding: var(--spacing-md);
+  gap: var(--spacing-xs);
 }
 
     .sidebar a {
-      font-size: var(--font-size-sm);
-      padding: var(--spacing-md) var(--spacing-lg);
-      text-transform: uppercase;
-      font-weight: 500;
+      font-size: var(--font-size-md);
+      padding: var(--spacing-md);
       color: rgba(var(--black), 1);
       transition: all 0.18s ease-in-out;
-      border-left: 4px solid rgba(var(--black), 0);
       border-bottom: none;
+      background: none;
+      border-radius: var(--border-radius-sm);
     }
 
     .sidebar a:hover,
     .sidebar a:focus {
-      border-left: 4px solid rgba(var(--orange), 1);
+      background: rgba(var(--purple), 0.1);
     }
 
     .sidebar a.active {
-      border-left: 4px solid rgba(var(--purple), 1);
+      background: rgba(var(--purple), 0.2);
     }

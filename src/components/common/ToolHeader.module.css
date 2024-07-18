@@ -8,11 +8,12 @@
 
 .ToolHeader h1 {
   margin-bottom: 0;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 .ToolHeader p {
   margin: 0;
   font-size: var(--font-size-md);
   color: rgba(var(--black), 1);
+  opacity:0.5;
 }

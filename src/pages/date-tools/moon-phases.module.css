@@ -1,0 +1,59 @@
+.LunarCycle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+    .currentIcon {
+      font-size: 20dvw;
+    }
+
+    .currentPhase {
+      font-size: var(--font-size-xl);
+      font-weight: bold;
+    }
+
+    .upComingPhases {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-xl);
+      width: 50%;
+      text-align: center;
+    }
+
+      .upComingPhases h2 {
+        font-size: var(--font-size-lg);
+        font-weight: bold;
+        margin-bottom: var(--spacing-sm);
+      }
+
+.lunarCalendar {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  width: 100%;
+  text-align: center;
+}
+
+.lunarCalendar table {
+  width: 100%;
+}
+
+  .lunarCalendar table th {
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    padding: var(--spacing-md) var(--spacing-xs);
+    border-bottom: 1px solid rgba(var(--black), 0.1);
+  }
+
+  .lunarCalendar table td {
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+
+  .lunarCalendar table th:first-child,
+  .lunarCalendar table td:first-child {
+    text-align: left;
+  }

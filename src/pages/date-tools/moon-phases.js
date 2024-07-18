@@ -9,11 +9,14 @@ const rapidApiKey = process.env.REACT_APP_RAPIDAPIKEY;
 
 function MoonPhases() {
 
-  const [moonData, setMoonData] = useState('');
+  const [basicMoonData, setBasicMoonData] = useState('');
+  const [emojiMoonData, setEmojiMoonData] = useState('');
+  const [calendarMoonData, setCalendarMoonData] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const options = {
+      
+      const basicOptions = {
         method: 'GET',
         url: 'https://moon-phase.p.rapidapi.com/basic',
         params: {format: 'html'},
@@ -22,32 +25,90 @@ function MoonPhases() {
           'x-rapidapi-host': 'moon-phase.p.rapidapi.com'
         }
       };
+
+      const emojiOptions = {
+        method: 'GET',
+        url: 'https://moon-phase.p.rapidapi.com/emoji',
+        headers: {
+          'x-rapidapi-key': rapidApiKey,
+          'x-rapidapi-host': 'moon-phase.p.rapidapi.com'
+        }
+      };
+
+      const calendarOptions = {
+        method: 'GET',
+        url: 'https://moon-phase.p.rapidapi.com/calendar',
+        params: {format: 'html'},
+        headers: {
+          'x-rapidapi-key': rapidApiKey,
+          'x-rapidapi-host': 'moon-phase.p.rapidapi.com'
+        }
+      };
       
       try {
-        const response = await axios.request(options);
-        setMoonData(response.data);
+        const basicResponse = await axios.request(basicOptions);
+        setBasicMoonData(basicResponse.data);
       } catch (error) {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
-          console.error("Data:", error.response.data);
-          console.error("Status:", error.response.status);
-          console.error("Headers:", error.response.headers);
+          console.error("Data:", error.basicResponse.data);
+          console.error("Status:", error.basicResponse.status);
+          console.error("Headers:", error.basicResponse.headers);
         } else if (error.request) {
           // The request was made but no response was received
-          console.error("No response received:", error.request);
+          console.error("No basicResponse received:", error.request);
         } else {
           // Something happened in setting up the request that triggered an Error
           console.error("Error:", error.message);
         }
         console.error("Config:", error.config);
       }
+
+      try {
+        const emojiResponse = await axios.request(emojiOptions);
+        setEmojiMoonData(emojiResponse);
+      } catch (error) {
+        if (error.emojiResponse) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.error("Data:", error.emojiResponse.data);
+          console.error("Status:", error.emojiResponse.status);
+          console.error("Headers:", error.emojiResponse.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.error("No emojiResponse received:", error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.error("Error:", error.message);
+        }
+        console.error("Config:", error.config);
+      }
+
+      try {
+        const calendarResponse = await axios.request(calendarOptions);
+        setCalendarMoonData(calendarResponse);
+      } catch (error) {
+        if (error.calendarResponse) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.error("Data:", error.calendarResponse.data);
+          console.error("Status:", error.calendarResponse.status);
+          console.error("Headers:", error.calendarResponse.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.error("No calendarResponse received:", error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.error("Error:", error.message);
+        }
+        console.error("Config:", error.config);
+      }
+
     };
 
     fetchData();
   }, []);
-
-  console.log(moonData);
 
   return (
     <main className="CrispTool">
@@ -61,13 +122,26 @@ function MoonPhases() {
         <div className={style.ToolTop}>
           <ToolHeader title="Moon Phases" description="Learn about the Lunar Cycle" />
         </div>
-        <section>
-          {/* <div dangerouslySetInnerHTML={{ __html: moonData }} /> */}
-          <ul>
-            <li>{moonData.phase_name}</li>
-            <li>{moonData.days_until_next_full_moon}</li>
-            <li>{moonData.days_until_next_new_moon}</li>
-          </ul>
+        <section className={style.LunarCycle}>
+          <div className={style.currentIcon}>
+            {emojiMoonData.data}
+          </div>
+          <div className={style.currentPhase}>
+            {basicMoonData.phase_name}
+          </div>
+          <div className={style.upComingPhases}>
+            <div>
+              <h2>{basicMoonData.days_until_next_new_moon}</h2>
+              <p>Days to New Moon</p>
+            </div>
+            <div>
+              <h2>{basicMoonData.days_until_next_full_moon}</h2>
+              <p>Days to Full Moon</p>
+            </div>
+          </div>
+        </section>
+        <section className={style.lunarCalendar}>
+          <div dangerouslySetInnerHTML={{ __html: calendarMoonData.data }} />
         </section>
       </section>
     </main>
