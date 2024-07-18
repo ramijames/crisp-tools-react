@@ -3,17 +3,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
+  padding: var(--spacing-xl);
   width: 100%;
+  background: radial-gradient(50% 100% at bottom, #592065 50%, #3E1746 100%);
 }
 
     .currentIcon {
-      font-size: 20dvw;
+      font-size: 10dvw;
+      text-shadow: 0 0 3px #fff9a73d, 0 0 80px #842897;
     }
 
     .currentPhase {
       font-size: var(--font-size-xl);
       font-weight: bold;
+      color: rgba(var(--white), 1);
     }
 
     .upComingPhases {
@@ -23,6 +26,7 @@
       padding: var(--spacing-xl);
       width: 50%;
       text-align: center;
+      color: rgba(var(--white), 1);
     }
 
       .upComingPhases h2 {
@@ -32,10 +36,12 @@
       }
 
 .lunarCalendar {
-  margin-top: var(--spacing-lg);
   padding: var(--spacing-xl);
   width: 100%;
   text-align: center;
+  background: #3E1746;
+  color: rgba(var(--white), 1);
+  border-top: 1px solid #842897;
 }
 
 .lunarCalendar table {

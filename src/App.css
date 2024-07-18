@@ -114,6 +114,7 @@ h1 {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .ToolPanel {
@@ -121,11 +122,14 @@ h1 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: var(--spacing-md) var(--spacing-xl);
   overflow-x: hidden;
   overflow-y: auto;
   align-items: flex-start;
 }
+
+    .CrispTool.hasBackTo {
+      padding-top: 63px;
+    }
 
     .ToolList {
       display: grid;

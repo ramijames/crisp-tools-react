@@ -2,7 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-lg) var(--spacing-lg) 0;
+  padding: var(--spacing-lg) var(--spacing-lg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:15px;
+  background: rgba(var(--white), 0.7);
+  backdrop-filter: blur(20px);
+  z-index: 100;
 }
 
 a.backButton {
