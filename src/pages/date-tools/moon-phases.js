@@ -44,66 +44,35 @@ function MoonPhases() {
           'x-rapidapi-host': 'moon-phase.p.rapidapi.com'
         }
       };
-      
-      try {
-        const basicResponse = await axios.request(basicOptions);
-        setBasicMoonData(basicResponse.data);
-      } catch (error) {
+
+      Promise.all([
+        axios.request(basicOptions),
+        axios.request(emojiOptions),
+        axios.request(calendarOptions)
+      ]).then((responses) => {
+        setBasicMoonData(responses[0].data);
+        setEmojiMoonData(responses[1]);
+        setCalendarMoonData(responses[2]);
+      }).catch((error) => {
+
+        console.log("429 error is acceptable for this use-case since I'm not paying for the PRO version of this API, so disregard!")
+        // Handle errors here
+        // console.error("Error fetching moon data:", error);
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
-          console.error("Data:", error.basicResponse.data);
-          console.error("Status:", error.basicResponse.status);
-          console.error("Headers:", error.basicResponse.headers);
+          console.error("Data:", error.response.data);
+          console.error("Status:", error.response.status);
+          console.error("Headers:", error.response.headers);
         } else if (error.request) {
           // The request was made but no response was received
-          console.error("No basicResponse received:", error.request);
+          console.error("No response received:", error.request);
         } else {
           // Something happened in setting up the request that triggered an Error
           console.error("Error:", error.message);
         }
         console.error("Config:", error.config);
-      }
-
-      try {
-        const emojiResponse = await axios.request(emojiOptions);
-        setEmojiMoonData(emojiResponse);
-      } catch (error) {
-        if (error.emojiResponse) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.error("Data:", error.emojiResponse.data);
-          console.error("Status:", error.emojiResponse.status);
-          console.error("Headers:", error.emojiResponse.headers);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error("No emojiResponse received:", error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error("Error:", error.message);
-        }
-        console.error("Config:", error.config);
-      }
-
-      try {
-        const calendarResponse = await axios.request(calendarOptions);
-        setCalendarMoonData(calendarResponse);
-      } catch (error) {
-        if (error.calendarResponse) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.error("Data:", error.calendarResponse.data);
-          console.error("Status:", error.calendarResponse.status);
-          console.error("Headers:", error.calendarResponse.headers);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error("No calendarResponse received:", error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error("Error:", error.message);
-        }
-        console.error("Config:", error.config);
-      }
+      });
 
     };
 
