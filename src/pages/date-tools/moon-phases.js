@@ -78,8 +78,8 @@ function MoonPhases() {
   }, []);
 
   return (
-    <main className="CrispTool hasBackTo">
-      <section className="ToolPanel pink">
+    <main className="CrispTool">
+      <section className="ToolPanel">
         <div className={style.ToolTop}>
           <ToolHeader title="Moon Phases" description="Learn about the Lunar Cycle" />
         </div>

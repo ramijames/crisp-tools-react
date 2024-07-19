@@ -7,6 +7,7 @@
   width: 100%;
   background: radial-gradient(50% 100% at bottom, #592065 50%, #3E1746 100%);
   border-radius: var(--border-radius-lg);
+  min-height: 1100px;
 }
 
     .currentIcon {
