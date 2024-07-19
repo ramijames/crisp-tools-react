@@ -8,7 +8,6 @@
   border-radius: var(--border-radius-md);
   background-color: rgba(var(--white));
   color: rgba(var(--black));
-  box-shadow: var(--shadow-md);
 }
 
     .ColorPaletteSelect {

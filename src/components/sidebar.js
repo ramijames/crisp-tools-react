@@ -7,11 +7,11 @@ import './sidebar.css';
 const Sidebar = () => {
   return (
     <nav className="sidebar">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/color-tools">Color Tools</NavLink>
-      <NavLink to="/text-tools">Text Tools</NavLink>
-      <NavLink to="/conversion-tools">Conversion Tools</NavLink>
-      <NavLink to="/date-tools">Date Tools</NavLink>
+      <NavLink to="/">All Tools</NavLink>
+      <NavLink to="/color-tools">Color</NavLink>
+      <NavLink to="/text-tools">Text</NavLink>
+      <NavLink to="/conversion-tools">Conversion</NavLink>
+      <NavLink to="/date-tools">Date</NavLink>
     </nav>
   );
 };

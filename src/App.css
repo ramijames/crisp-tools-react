@@ -96,7 +96,7 @@ h1 {
 
 .CrispContent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: calc(100% - 78px);
 }
 
@@ -105,14 +105,14 @@ h1 {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  overflow-y:auto;
-  overflow-x: hidden;
 }
 
 .CrispTool {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   height: 100%;
   position: relative;
 }
@@ -121,19 +121,24 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: var(--max-width);
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  margin: 0 auto;
   align-items: flex-start;
 }
 
-    .CrispTool.hasBackTo {
-      padding-top: 63px;
+    .ToolGroup {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 1px solid rgba(var(--black), 0.1);
+      padding-bottom: var(--spacing-xl);
+      margin-bottom: var(--spacing-xl);
     }
 
     .ToolList {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-gap: var(--spacing-md);
       width: 100%;
       padding: 0 var(--spacing-lg) var(--spacing-md);
