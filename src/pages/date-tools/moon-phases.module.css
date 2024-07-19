@@ -6,7 +6,7 @@
   padding: var(--spacing-xl);
   width: 100%;
   background: radial-gradient(50% 100% at bottom, #592065 50%, #3E1746 100%);
-  min-height: 100%;
+  border-radius: var(--border-radius-lg);
 }
 
     .currentIcon {
@@ -40,9 +40,10 @@
   padding: var(--spacing-xl);
   width: 100%;
   text-align: center;
-  background: #3E1746;
+  background: linear-gradient(to bottom, #3E1746, transparent);
   color: rgba(var(--white), 1);
   border-top: 1px solid #842897;
+  margin-top: var(--spacing-xl);
 }
 
 .lunarCalendar table {

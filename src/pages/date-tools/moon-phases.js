@@ -79,7 +79,7 @@ function MoonPhases() {
 
   return (
     <main className="CrispTool hasBackTo">
-      <section className="ToolPanel">
+      <section className="ToolPanel pink">
         <div className={style.ToolTop}>
           <ToolHeader title="Moon Phases" description="Learn about the Lunar Cycle" />
         </div>
@@ -100,9 +100,9 @@ function MoonPhases() {
               <p>Days to Full Moon</p>
             </div>
           </div>
-        </section>
-        <section className={style.lunarCalendar}>
-          <div dangerouslySetInnerHTML={{ __html: calendarMoonData.data }} />
+          <section className={style.lunarCalendar}>
+            <div dangerouslySetInnerHTML={{ __html: calendarMoonData.data }} />
+          </section>
         </section>
       </section>
     </main>

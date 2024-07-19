@@ -125,6 +125,16 @@ h1 {
   height: 100%;
   margin: 0 auto;
   align-items: flex-start;
+  border-radius: var(--border-radius-lg);
+
+  &.pink {
+    color: rgba(var(--white));
+    background: rgba(var(--pink));
+
+    p {
+      color: rgba(var(--white));
+    }
+  }
 }
 
     .ToolGroup {
