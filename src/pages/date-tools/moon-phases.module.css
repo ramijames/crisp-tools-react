@@ -6,6 +6,7 @@
   padding: var(--spacing-xl);
   width: 100%;
   background: radial-gradient(50% 100% at bottom, #592065 50%, #3E1746 100%);
+  min-height: 100%;
 }
 
     .currentIcon {

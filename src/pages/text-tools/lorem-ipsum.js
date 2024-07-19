@@ -27,14 +27,12 @@ function LoremIpsumPage () {
 
     const text = lorem.generateParagraphs(parseInt(numParagraphs, 10));
 
-    console.log(text);
-
     setGeneratedText(text);
   
   }, [numParagraphs]);
 
   return (
-    <main className="CrispTool">
+    <main className="CrispTool hasBackTo">
       <BackTo to="/text-tools">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 1L2.41421 5.58579C1.63317 6.36683 1.63316 7.63316 2.41421 8.41421L7 13" stroke="black" strokeWidth="1" strokeLinecap="round"/>
@@ -43,7 +41,7 @@ function LoremIpsumPage () {
       </BackTo>
       <section className="ToolPanel">
         <ToolHeader title="Lorem Ipsum Generator" description="Generate text content for use in your designs and mockups" />
-        <div className="ToolPanel__form">
+        <div className={styles.ToolPanel__form}>
           <div className="ToolPanel__form__input">
             <Input
               htmlFor="numParagraphs"

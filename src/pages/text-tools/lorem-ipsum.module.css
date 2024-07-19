@@ -1,6 +1,6 @@
 .ToolPanel__output {
   margin-top: var(--spacing-md);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
   background-color: rgba(var(--white));
   color: rgba(var(--black));
@@ -11,4 +11,11 @@
   word-break: break-word;
   hyphens: auto;
   box-shadow: var(--shadow-sm);
+}
+
+.ToolPanel__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-lg);
 }

@@ -17,8 +17,6 @@ function ColorPaletteGeneratorPage () {
       lighten: [],
       darken: []
     };
-
-    console.log(color);
     
     // Lighten the color
     output.lighten = chroma.scale([color, 'white']).mode('lch').colors(5);
@@ -32,7 +30,7 @@ function ColorPaletteGeneratorPage () {
   const colorPalette = GenerateColorPalette(color);
 
   return (
-    <main className="CrispTool">
+    <main className="CrispTool hasBackTo">
       <BackTo to="/color-tools">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 1L2.41421 5.58579C1.63317 6.36683 1.63316 7.63316 2.41421 8.41421L7 13" stroke="black" strokeWidth="1" strokeLinecap="round"/>

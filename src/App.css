@@ -136,6 +136,8 @@ h1 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-gap: var(--spacing-md);
       width: 100%;
+      padding: 0 var(--spacing-lg) var(--spacing-md);
+      text-align: center;
     }
 
         .LinkIcon {
@@ -145,14 +147,14 @@ h1 {
           justify-content: center;
           width: 100%;
           border: none;
-          font-size: var(--font-size-sm);
+          font-size: var(--font-size-md);
           color: rgba(var(--black));
           border: none;
-          transition: color 0.18s ease-in-out;
+          transition: transform 0.18s ease-in-out;
         }
 
         .LinkIcon:hover {
-          color: rgba(var(--purple));
+          transform: scale(1.05);
           border: none;
         }
 
