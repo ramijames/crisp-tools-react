@@ -10,7 +10,6 @@
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
-  box-shadow: var(--shadow-sm);
 }
 
 .ToolPanel__form {

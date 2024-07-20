@@ -74,7 +74,7 @@ function JsonYamlConverter() {
           </div>
         </div>
         <section className={style.Converter}>
-          <section className={style.YamlConverterContent}>
+          <section className={style.ConverterContent}>
             <textarea
               value={mode === 'YAMLtoJSON' ? yamlInput : jsonInput}
               onChange={handleYamlInputChange}
