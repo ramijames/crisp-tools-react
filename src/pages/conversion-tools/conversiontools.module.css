@@ -18,7 +18,6 @@
   border-radius: var(--border-radius-lg);
   background-color: rgba(var(--white));
   color: rgba(var(--black));
-  box-shadow: var(--shadow-sm);
 }
 
 .Toggle {
