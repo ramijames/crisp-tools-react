@@ -7,6 +7,10 @@ function ColorToolsList() {
         <img src="/color-palette-generator.svg" alt="Color Palette Generator" />
         Color Palette Generator
       </Link>
+      <Link to="/color-tools/darken-color" className="LinkIcon">
+        <img src="/color-palette-generator.svg" alt="Color Palette Generator" />
+        Darken Color
+      </Link>
     </section>
   );
 }
