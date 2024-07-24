@@ -28,7 +28,6 @@ function App() {
       <div className="Crisp">
         <Header />
         <main className="CrispContent">
-          <Sidebar />
           <section className="CrispPages">
             <Routes>
               <Route path="/" element={<Home />} />

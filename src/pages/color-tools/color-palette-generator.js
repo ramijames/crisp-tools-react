@@ -3,76 +3,70 @@ import ToolHeader from '../../components/common/ToolHeader';
 import style from './color-palette-generator.module.css';
 import { HexColorPicker } from 'react-colorful';
 import { ConvertHexToRGB, ConvertRGBToHex } from '../../utils/color-conversion';
+import Button from '../../components/chrome/Button';
 import chroma from 'chroma-js';
+import color from 'color';
 
 function ColorPaletteGeneratorPage () {
-  const [color, setColor] = useState("#cc9900");
+  const [baseColor, setBaseColor] = useState('#ffffff');
+  const [numColors, setNumColors] = useState(5);
+  const [colorPalette, setColorPalette] = useState([]);
 
-  // For RGB output
-  const [red, green, blue] = ConvertHexToRGB(color);
-
-  function GenerateColorPalette(color) {
-    const output = {
-      lighten: [],
-      darken: []
-    };
-    
-    // Lighten the color
-    output.lighten = chroma.scale([color, 'white']).mode('lch').colors(5);
-
-    // Darken the color
-    output.darken = chroma.scale([color, 'black']).mode('lch').colors(5);
-
-    return output;
+  // Generate a random color
+  function GenerateRandomColor() {
+    const randomColor = chroma.random();
+    setBaseColor(randomColor.hex());
   }
 
-  const colorPalette = GenerateColorPalette(color);
+  // Generate an initial color palette
+  useEffect(() => {
+    generateColorPalette();
+  }, [baseColor, numColors]);
+
+  console.log(baseColor);
+
+  const generateColorPalette = () => {
+    // Logic to generate color palette based on baseColor and numColors
+    const newPalette = Array.from({ length: numColors }, (_, i) => {
+      // Example logic to generate colors
+      return chroma.random();
+    });
+    setColorPalette(newPalette);
+  };
+
+  const handleNumColorsChange = (e) => {
+    setNumColors(Number(e.target.value));
+  };
+
+  const generateRandomBaseColor = () => {
+    const randomColor = chroma.random();
+    setBaseColor(randomColor);
+  };
 
   return (
     <main className="CrispTool hasBackTo">
       <section className="ToolPanel">
         <ToolHeader title="Color Palette Generator" description="Generate a color palette based on a single color" />
         <section className={style.ColorPaletteGenerator}>
-          <section className={style.ColorPaletteSelect}>
-            <HexColorPicker color={color} onChange={setColor} />
-            <div className={style.ColorSelectHEX}>
-              <div>HEX <span className={style.number}>{color}</span></div>
-            </div>
-            <div className={style.ColorSelectRGB}>
-              <div>R <span className={style.number}>{red}</span></div>
-              <div>G <span className={style.number}>{green}</span></div>
-              <div>B <span className={style.number}>{blue}</span></div>
-            </div>
-          </section>
           <section className={style.ColorPaletteOutput}>
-            <h2>Lighten</h2>
             <div className={style.allColors}>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[0]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[1]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[2]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[3]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.lighten[4]}}></div>
-              <div className={style.singleColorValue}>{colorPalette.lighten[0]}</div>
-              <div className={style.singleColorValue}>{colorPalette.lighten[1]}</div>
-              <div className={style.singleColorValue}>{colorPalette.lighten[2]}</div>
-              <div className={style.singleColorValue}>{colorPalette.lighten[3]}</div>
-              <div className={style.singleColorValue}>{colorPalette.lighten[4]}</div>
-            </div>
-
-            <h2>Darken</h2>
-            <div className={style.allColors}>
-              <div className={style.singleColor} style={{background:colorPalette.darken[0]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[1]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[2]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[3]}}></div>
-              <div className={style.singleColor} style={{background:colorPalette.darken[4]}}></div>
-              <div className={style.singleColorValue}>{colorPalette.darken[0]}</div>
-              <div className={style.singleColorValue}>{colorPalette.darken[1]}</div>
-              <div className={style.singleColorValue}>{colorPalette.darken[2]}</div>
-              <div className={style.singleColorValue}>{colorPalette.darken[3]}</div>
-              <div className={style.singleColorValue}>{colorPalette.darken[4]}</div>
+              {colorPalette.map((color, index) => (
+                <div key={index} className={style.singleColor} style={{background:color}}></div>
+              ))}
+              {/* <div className={style.singleColor} style={{background:colorPalette[0]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette[1]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette[2]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette[3]}}></div>
+              <div className={style.singleColor} style={{background:colorPalette[4]}}></div> */}
             </div>
           </section>
+        </section>
+        <section className={style.ColorManager}>
+          <HexColorPicker color={baseColor} onChange={setBaseColor} />
+          <input type="number" value={numColors} onChange={(e) => setNumColors(e.target.value)} />
+          <Button onClick={GenerateRandomColor}>
+            Random BaseColor
+          </Button>
         </section>
       </section>
     </main>

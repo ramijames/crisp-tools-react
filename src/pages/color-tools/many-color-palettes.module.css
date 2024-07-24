@@ -10,17 +10,6 @@
   color: rgba(var(--black));
 }
 
-    .ColorManager {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      background-color: rgba(var(--black));
-      color: rgba(var(--black));
-      padding: var(--spacing-lg);
-    }
-
     .ColorPaletteSelect {
       height: 100%;
       display: flex;
@@ -79,6 +68,7 @@
     .ColorPaletteOutput {
       width: 100%;
       height: 100%;
+      padding: var(--spacing-xl);
     }
 
         .ColorPaletteOutput h2 {
@@ -88,15 +78,18 @@
         
         .allColors {
           width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: row;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 2fr 1fr;
+          overflow: hidden;
+          border-radius: var(--border-radius-md);
+          margin-bottom: var(--spacing-xl);
+          border: 1px solid rgba(var(--black), 0.1);
           gap: 0;
         }
 
             .singleColor {
-              height: 100%;
-              width: 100%;
+              height: 80px;
               flex-direction: column;
               align-items: center;
               justify-content: center;

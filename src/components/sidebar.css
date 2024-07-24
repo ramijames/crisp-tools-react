@@ -1,17 +1,10 @@
 .sidebar {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-md);
   gap: var(--spacing-xs);
-  overflow-x: auto;
-  overflow-y: hidden;
-  min-height: 72px;
 
   @media (max-width: 768px) {
     justify-content: flex-start;
