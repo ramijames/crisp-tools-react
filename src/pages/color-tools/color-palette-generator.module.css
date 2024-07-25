@@ -97,17 +97,29 @@
             .singleColor {
               height: 100%;
               width: 100%;
+              display: flex;
               flex-direction: column;
               align-items: center;
-              justify-content: center;
+              justify-content: space-between;
+              padding: var(--spacing-md);
               background: blue;
             }
 
             .singleColorValue {
-              font-size: var(--font-size-sm);
-              background: rgba(var(--black), 0.1);
+              font-size: var(--font-size-md);
+              border: 1px solid rgba(var(--black), 0.1);
               padding: var(--spacing-sm);
+              border-radius: var(--border-radius-md);
               display: flex;
               align-items: center;
               justify-content: center;
             }
+
+            .HexColorPicker {
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+            }
+
+                .singleColor:hover .HexColorPicker {
+                  opacity: 1;
+                }
