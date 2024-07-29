@@ -83,12 +83,6 @@ function ColorPaletteGeneratorPage () {
         <section className={style.ColorPaletteGenerator}>
           <section className={style.ColorPaletteOutput}>
             <div className={style.allColors}>
-              {/* {colorPalette.map((color, index) => (
-                <div key={index} className={style.singleColor} style={{background:color}}>
-                  <HexColorPicker color={color} onChange={(newColor) => setColorPalette(colorPalette.map((c, i) => i === index ? newColor : c))} />
-                  <div className={style.singleColorValue}>{color}</div>
-                </div>
-              ))} */}
               {Object.keys(colorPalette).map((key, index) => (
                 <div 
                   key={index} 
@@ -107,17 +101,12 @@ function ColorPaletteGeneratorPage () {
                       }
                     })}
                   />
-                  
-                  {/* <Button onClick={() => LockColor(key)}>
-                    {colorPalette[key].locked ? 'Unlock' : 'Lock'}
-                  </Button> */}
                 </div>
               ))}
             </div>
           </section>
         </section>
         <section className={style.ColorManager}>
-          {/* <HexColorPicker color={baseColor} onChange={setBaseColor} /> */}
           <input type="number" value={numColors} onChange={(e) => setNumColors(e.target.value)} />
           <Button onClick={GenerateRandomColor}>
             Random BaseColor
